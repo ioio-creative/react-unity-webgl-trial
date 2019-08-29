@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/ioio-creative/react-unity-webgl-trial/master/public/logos/react-unity-webgl.jpg" height="300px">
-</div>
+![Logo](https://raw.githubusercontent.com/ioio-creative/react-unity-webgl-trial/master/public/logos/react-unity-webgl.jpg)
 
 This project is an attempt to to use the excellent library [react-unity-webgl (RUW)](https://github.com/elraccoone/react-unity-webgl) by [Jeffrey Lanters](https://github.com/jeffreylanters). RUW provides a React component wrapper for embedding a Unity WebGL build in a React application, with two-way communication between the React and Unity applications.
 
