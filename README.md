@@ -9,6 +9,8 @@ For common usage of RUW, please refer to [RUW's documentation wiki](https://gith
 
 To enable two-way React-Unity communication, RUW of course uses methods provided by [Unity](https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html).
 
+One special note is that when sending messages from Unity to React, one should use the [Pointer_stringify](https://forum.unity.com/threads/pointer_stringify-is-returning-garbled-text.481419/) helper function to convert a Unity C# string (???) to a JavaScript string.
+
 This project uses the Unity WebGL builds from the following projects:
 * [SpaceShooterTrial](https://github.com/szewa-polyu/SpaceShooterTrial)
 * [react-unity-webgl-test](https://github.com/jeffreylanters/react-unity-webgl-test)
