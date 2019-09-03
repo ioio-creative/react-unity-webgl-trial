@@ -1,0 +1,32 @@
+/* https://github.com/networked-aframe/networked-aframe/blob/master/examples/index.html */
+
+.trial-list-page {
+  width: 100vw;
+  height: 100vh;
+
+  background: #33425B;
+  color: #FAFAFA;
+  font-family: monospace;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.trial-list-page h1 {
+  /* font-weight: 300; */
+}
+
+.trial-list-page .trial-item {
+  margin: 20px 0;
+}
+
+.trial-list-page .trial-slug {
+  color: #61dafb;
+}
+
+.trial-list-page .trial-ref-label {
+
+}
+
+.trial-list-page .trial-ref a {
+  color: #61dafb;
+}

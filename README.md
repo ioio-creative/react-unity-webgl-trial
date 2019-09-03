@@ -9,13 +9,13 @@ For common usage of RUW, please refer to [RUW's documentation wiki](https://gith
 
 To enable two-way React-Unity communication, RUW of course uses methods provided by [Unity](https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html).
 
-One special note is that when sending messages from Unity to React, one should use the [Pointer_stringify](https://forum.unity.com/threads/pointer_stringify-is-returning-garbled-text.481419/) helper function to convert a Unity C# string (???) to a JavaScript string.
+One special note is that when sending messages from Unity to React, one should use the [Pointer_stringify](https://forum.unity.com/threads/pointer_stringify-is-returning-garbled-text.481419/) helper function to convert a Unity C# string (???) to a JavaScript string. This string conversion should be done in JavaScript functions defined in a JSLib file, for [binding communication](https://github.com/elraccoone/react-unity-webgl/wiki/Communication-from-Unity-to-React), to be placed in "Assets/Plugins/WebGL/MyPlugin.jslib" in the Unity project.
 
 This project uses the Unity WebGL builds from the following projects:
 * [SpaceShooterTrial](https://github.com/szewa-polyu/SpaceShooterTrial)
 * [react-unity-webgl-test](https://github.com/jeffreylanters/react-unity-webgl-test)
 
-The above Unity WebGL builds are placed in the directory "public/unityBuilds" under the Create React App directory structure.
+The above Unity WebGL builds are placed in the directory "public/unityBuilds" under the CRA directory structure. When specifying buildJsonPath and unityLoaderJsPath for initialising a [UnityContent](https://github.com/elraccoone/react-unity-webgl/blob/master/source/UnityContent.ts) instance, better specify the paths using [process.env.PUBLIC_URL](https://create-react-app.dev/docs/using-the-public-folder) to ensure that the paths point to CRA's public directory correctly.
 
 Some reflections: I have tried exporting a Unity project to an Android Studio project before. Since I am not too familiar with Android / Gradle development, embedding a Unity project in an Android project was a bit of a pain, due to lots of trial-and-errors when facing build linkage errors. On the other hand, I find embedding a Unity WebGL build in a React application quite easy, thanks to RUW. The web is really a beautiful platform, and React and Unity WebGL can be a match made in heaven:)
 
