@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "electron-is-dev": "^1.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-loadable": "^5.5.0",
@@ -14,7 +15,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-build": "electron-builder -c.extraMetadata.main=build/electron.js",
+    "electron-pack": "electron-builder -c.extraMetadata.main=build/electron.js",
+    "preelectron-pack": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +35,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "electron": "^6.0.7",
+    "electron-builder": "^21.2.0",
+    "wait-on": "^3.3.0"
+  },
+  "main": "public/electron.js",
+  "build": {
+    "appId": "com.ioiocreative.react-unity-webgl-trial",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories":{
+      "buildResources": "assets"
+    }
+  },
+  "author": "IOIO Tech",
+  "homepage": "./"
 }
