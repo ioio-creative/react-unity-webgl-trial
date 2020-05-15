@@ -6,6 +6,7 @@ For common usage of RUW, please refer to [RUW's documentation wiki](https://gith
 * [Embedding a Unity WebGL build in a React application](https://github.com/elraccoone/react-unity-webgl/wiki/Quick-Start-Guide)
 * [Communication from React to Unity](https://github.com/elraccoone/react-unity-webgl/wiki/Communication-from-React-to-Unity)
 * [Communication from Unity to React](https://github.com/elraccoone/react-unity-webgl/wiki/Communication-from-Unity-to-React)
+* [Unity WebGL build built in events](https://github.com/elraccoone/react-unity-webgl/wiki/Built-in-events)
 
 To enable two-way React-Unity communication, RUW of course uses methods provided by [Unity](https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html).
 
