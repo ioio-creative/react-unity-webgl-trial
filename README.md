@@ -12,6 +12,10 @@ To enable two-way React-Unity communication, RUW of course uses methods provided
 
 One special note is that when sending messages from Unity to React, one should use the [Pointer_stringify](https://forum.unity.com/threads/pointer_stringify-is-returning-garbled-text.481419/) helper function to convert a Unity C# string (???) to a JavaScript string. This string conversion should be done in JavaScript functions defined in a JSLib file, for [binding communication](https://github.com/elraccoone/react-unity-webgl/wiki/Communication-from-Unity-to-React), to be placed in "Assets/Plugins/WebGL/MyPlugin.jslib" in the Unity project.
 
+To see what other methods are exposed by the UnityContent class, we can refer to [RUW's source code](https://github.com/elraccoone/react-unity-webgl/blob/master/source/UnityContent.ts), in particular:
+* public setFullscreen(fullscreen: boolean): void
+* public remove(): void
+
 This project uses the Unity WebGL builds from the following projects:
 * [SpaceShooterTrial](https://github.com/szewa-polyu/SpaceShooterTrial)
 * [react-unity-webgl-test](https://github.com/jeffreylanters/react-unity-webgl-test)
